@@ -4,9 +4,9 @@ require("hardhat-deploy");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
-// const ALCHEMY_API_KEY =
+const ALCHEMY_API_KEY = "P4JGZW-j9YSv-e4nDC-7Kt_6qSnPZSC0"
 
-// const SEPOLIA_ACCOUNT_PRIVATE_KEY = 
+const SEPOLIA_ACCOUNT_PRIVATE_KEY = "b8ceae2aeaa51d1b99b2657c9846e2e4ceefc55c1d964a2faee5874107486246"
 
 module.exports = {
   // solidity: "0.8.18",
@@ -25,19 +25,19 @@ module.exports = {
       // gasPrice: 130000000000,
   },
 
-    // sepolia:{
-    //   url:`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
-    //   accounts:[`${SEPOLIA_ACCOUNT_PRIVATE_KEY}`],
-    //   chainId : 11155111,
-    //   blockConfirmation:6
-    // }
+    sepolia:{
+      url:`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      accounts:[`${SEPOLIA_ACCOUNT_PRIVATE_KEY}`],
+      chainId : 11155111,
+      blockConfirmation:1
+    }
   },
 
-  // etherscan: {
-  //   // Your API key for Etherscan
-  //   // Obtain one at https://etherscan.io/
-  //   apiKey: 
-  // },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "PJ8GRA4ENCSE8GG8Y6NHM24IH6WW6ZQPAR"
+  },
 
   namedAccounts: {
     deployer: {

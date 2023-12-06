@@ -7,13 +7,13 @@ module.exports=  async({getNamedAccounts, deployments})=>{
     const {deployer} = await getNamedAccounts();
     const chainId = network.config.chainId;
 
-    // well what happen when we want to change the chains -- then we will passs the chain address at contructor...
+    // well what happen when we want to change the chains -- then we will pass the chain address at constructor...
     // when going for localhost or hardhat network we want to use a mock
 
     // const ethUsdPriceFeedAddress = networkConfig[chainId]["ethUsdPriceFeed"];
     let ethUsdPriceFeedAddress;
     if(developmentChain.includes(network.name)){
-       const ethUsdAggregator = await deployments.get("MockV3Aggregator"); // to get recent deployement
+       const ethUsdAggregator = await deployments.get("MockV3Aggregator"); // to get recent deployment
        ethUsdPriceFeedAddress = ethUsdAggregator.address;
     }
     else{
